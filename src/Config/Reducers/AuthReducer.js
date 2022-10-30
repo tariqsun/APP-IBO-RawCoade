@@ -30,7 +30,7 @@ export const AuthReducer = createSlice({
     initialState,
     reducers: {
       getUser: (state) => {
-        state.user = JSON.parse(localStorage.getItem('user'));
+        state.user = JSON.parse(sessionStorage.getItem('user'));
       }
     },
     extraReducers:(builder)=>{
@@ -45,8 +45,8 @@ export const AuthReducer = createSlice({
                state.errors = action.payload;
 
             }else{
-                localStorage.setItem('token', action.payload.token);
-                localStorage.setItem('user', JSON.stringify(action.payload.user)); 
+                sessionStorage.setItem('token', action.payload.token);
+                sessionStorage.setItem('user', JSON.stringify(action.payload.user)); 
                 state.check = true;
                 state.user = action.payload.user;
                 

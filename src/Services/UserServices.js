@@ -1,4 +1,3 @@
-import axios from "axios"
 import api from "../Helper/Api";
 
 
@@ -9,24 +8,24 @@ export const login = async (input) =>{
 }
 
 export const getAuthUser =  () =>{
-    if(localStorage.getItem('user') !== null){
-        return JSON.parse(localStorage.getItem('user'));
+    if(sessionStorage.getItem('user') !== null){
+        return JSON.parse(sessionStorage.getItem('user'));
     }else{
         return null
     }
 }
 
 export const getAuthToken =  () =>{
-    if(localStorage.getItem('token') !== null){
-        return localStorage.getItem('token');
+    if(sessionStorage.getItem('token') !== null){
+        return sessionStorage.getItem('token');
     }else{
         return null
     }
 }
 
 export const isUserAuthenticated =  () =>{
-    if(localStorage.getItem('token') !== null){
-        return localStorage.getItem('token');
+    if(sessionStorage.getItem('token') !== null){
+        return sessionStorage.getItem('token');
     }else{
         return null
     }

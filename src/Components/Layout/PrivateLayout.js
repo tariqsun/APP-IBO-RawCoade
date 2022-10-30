@@ -71,6 +71,7 @@ function PrivateLayout(props) {
                         left: 0,
                         top: 0,
                         bottom: 0,
+                        zIndex:'10000'
                     }}
                 >
             <div className="logo" >
@@ -84,7 +85,7 @@ function PrivateLayout(props) {
                     mode="inline" 
                     items={items} />
             </Sider>
-            <Layout className="site-layout" style={{ marginLeft:collapsed?80:200 }}>
+            <Layout className="site-layout" style={{ marginLeft:collapsed?80:80 }}>
             <Header className="site-layout-background bg-slate-50" style={{ padding: 0,backgroundColor:'#1890ff' }} />
             <Content style={{ margin: '0 16px' }}>
                 <Breadcrumb style={{ margin: '8px 0' }}>

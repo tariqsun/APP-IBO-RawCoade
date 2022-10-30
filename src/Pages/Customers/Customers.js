@@ -46,6 +46,7 @@ function Customers() {
         Header: "Action",
         accessor: 'id',
         Cell:ActionPill,
+        phoneAccessor:'phone_number',
         onEdit:(id)=>{
            navigate(`edit/${id}`);
         },

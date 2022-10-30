@@ -116,7 +116,7 @@ export function BolStatusPill({ value }) {
 };
 
 
-export function ActionPill({ value, column }) {
+export function ActionPill({ value, column, row }) {
   const id = value;
 
   return (
@@ -126,6 +126,9 @@ export function ActionPill({ value, column }) {
       <button
           onClick={()=>column.onDelete(id)}
           ><FaTrash className='text-red-600 mx-1' /></button>
+      {row.original[column.phoneAccessor]?(
+        <a>whats</a>
+      ):''}
     </div>
   );
 };

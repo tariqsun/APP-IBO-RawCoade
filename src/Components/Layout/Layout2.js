@@ -8,29 +8,30 @@ import {
     TeamOutlined,
     UserOutlined,
   } from '@ant-design/icons';
-  import { Breadcrumb, Layout, Menu } from 'antd';
-  import React, { useState } from 'react';
+
+import { Breadcrumb, Layout, Menu } from 'antd';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate, useNavigate } from 'react-router-dom';
   
   const { Header, Content, Footer, Sider } = Layout;
   
   
-  function getItem(
+function getItem(
     label,
     key,
     icon=undefined,
     children=undefined,
-  ) {
+) {
     return {
       key,
       icon,
       children,
       label,
     };
-  }
+}
   
-  const items = [
+const items = [
     getItem('Dashboard', 'dashboard', <PieChartOutlined />),
     getItem('Customers', '/customers', <TeamOutlined />),
     getItem('plans', '/plans', <GiftOutlined />),
@@ -42,12 +43,12 @@ import { Navigate, useNavigate } from 'react-router-dom';
         getItem('Expense Category', '/expense/category'), 
         getItem('Expense', '/expense')
     ]),
-  ];
+];
 
 
  
   
-  const Layout2 = (props) => {
+const Layout2 = (props) => {
 
     const navigate = useNavigate();
     const authState = useSelector((state)=>state.auth);
@@ -74,6 +75,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
                             left: 0,
                             top: 0,
                             bottom: 0,
+                            zIndex:'10000'
                           }}
                     >
                   <div className="logo" >
@@ -87,7 +89,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
                         mode="inline" 
                         items={items} />
                 </Sider>
-                <Layout className="site-layout" style={{ marginLeft:collapsed?80:200 }}>
+                <Layout className="site-layout" style={{ marginLeft:collapsed?80:80 }}>
                   <Header className="site-layout-background bg-slate-50" style={{ padding: 0,backgroundColor:'#1890ff' }} />
                   <Content style={{ margin: '0 16px' }}>
                     <Breadcrumb style={{ margin: '8px 0' }}>
