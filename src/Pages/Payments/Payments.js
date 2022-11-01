@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react'
 import PrivateLayout from '../../Components/Layout/PrivateLayout'
 import Page from '../../Components/Page';
-import { PaymentDayStatusPill } from '../../Components/UI/Table/ReactTable';
+import { PaymentDayStatusPill, WhatsappActionPill } from '../../Components/UI/Table/ReactTable';
 import Table from '../../Components/UI/Table/Table';
 import { getPendingPayments } from '../../Services/PaymentServices';
 
@@ -34,6 +34,11 @@ function Payments() {
         Header: "Left in",
         accessor: 'days_left',
         Cell:PaymentDayStatusPill
+      },
+      {
+        Header: "Action",
+        accessor: 'id',
+        Cell:WhatsappActionPill
       },
   ], []);
 

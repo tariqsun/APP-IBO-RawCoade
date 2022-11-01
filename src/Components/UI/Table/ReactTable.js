@@ -6,6 +6,8 @@ import { Button, PageButton } from './shared/Button'
 import { classNames } from './shared/Utils'
 import { SortIcon, SortUpIcon, SortDownIcon } from './shared/Icons'
 import { Link } from 'react-router-dom'
+import { WhatsAppOutlined } from '@ant-design/icons'
+import { getWhatsappLink, trimString } from '../../../Helper/common'
 
 
 
@@ -120,15 +122,25 @@ export function ActionPill({ value, column, row }) {
   const id = value;
 
   return (
-    <div>
+    <div className='flex justify-center items-center'>
       <button 
           onClick={()=>column.onEdit(id)}><FaEdit className='mx-1' /></button>
       <button
           onClick={()=>column.onDelete(id)}
           ><FaTrash className='text-red-600 mx-1' /></button>
       {row.original[column.phoneAccessor]?(
-        <a>whats</a>
+        <a className='text-green-600 mx-1' target="__blank" href={getWhatsappLink(row.original)}><WhatsAppOutlined /></a>
       ):''}
+    </div>
+  );
+};
+
+export function WhatsappActionPill({ value, column, row }) {
+  const id = value;
+
+  return (
+    <div className='flex justify-center items-center'>
+        <a className='text-green-600 text-kg mx-1' target="__blank" href={getWhatsappLink(row.original)}><WhatsAppOutlined /></a>
     </div>
   );
 };
