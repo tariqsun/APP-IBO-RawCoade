@@ -23,3 +23,5 @@ export const getWhatsappLink = (object) =>{
    Auto Billing Responder "SunLink"`
    return wa_link;
 };
+
+

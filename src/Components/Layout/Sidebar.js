@@ -121,6 +121,47 @@ function Sidebar() {
                             </SideMenuItem>
 
                     </SideMenuItem>
+
+                    <SideMenuItem
+                        label="Services"
+                        icon={<FiPackage />}
+                        >
+                            <SideMenuItem
+                            label="Nas"
+                            icon={<AiFillDollarCircle />}
+                            >
+
+                                <SideMenuItem
+                                    label="Add New"
+                                    route="/nas/add"
+                                    icon={<FiDollarSign />}
+                                    />
+                                <SideMenuItem
+                                    label="NAS"
+                                    route="/nas"
+                                    icon={<FiDollarSign />}
+                                    />
+
+                            </SideMenuItem> 
+                            <SideMenuItem
+                                label="Panel"
+                                icon={<AiFillDollarCircle />}
+                                >
+
+                                <SideMenuItem
+                                    label="Add New"
+                                    route="/panels/add"
+                                    icon={<FiDollarSign />}
+                                    />
+                                <SideMenuItem
+                                    label="Panels"
+                                    route="/panels"
+                                    icon={<FiDollarSign />}
+                                    />
+
+                            </SideMenuItem>
+
+                    </SideMenuItem>
                 </ul>
             </div>
         </aside>

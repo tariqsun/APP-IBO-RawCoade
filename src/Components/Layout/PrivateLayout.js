@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux'
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Breadcrumb, Layout, Menu } from 'antd';
 import {
+    CloudServerOutlined,
     DollarOutlined,
+    ExportOutlined,
     GiftOutlined,
     PieChartOutlined,
     TeamOutlined,
@@ -36,10 +38,14 @@ const items = [
       getItem('Pending Payments', '/payments'), 
       getItem('Payment History', '/payments/history')
   ]),
-  getItem('Expense', 'sub4', <DollarOutlined />, [
+  getItem('Expense', 'sub4', <ExportOutlined />, [
       getItem('Expense Category', '/expense/category'), 
       getItem('Expense', '/expense')
   ]),
+  getItem('Services', 'sub5', <CloudServerOutlined />, [
+        getItem('Panel', '/panels'), 
+        getItem('Nas', '/nas')
+ ]),
 ];
 
 function PrivateLayout(props) {

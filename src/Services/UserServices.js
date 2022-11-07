@@ -16,11 +16,14 @@ export const getAuthUser =  () =>{
 }
 
 export const getAuthToken =  () =>{
+
     if(sessionStorage.getItem('token') !== null){
         return sessionStorage.getItem('token');
-    }else{
-        return null
     }
+
+  
+
+    return null;
 }
 
 export const isUserAuthenticated =  () =>{

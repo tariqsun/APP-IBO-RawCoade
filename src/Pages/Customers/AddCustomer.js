@@ -10,6 +10,8 @@ import { getPlans } from '../../Services/PlanServices'
 
 function AddCustomer() {
 
+   const [form] = Form.useForm();
+
   const [state, setState] = useState({
     loading:false,
     errors:{}

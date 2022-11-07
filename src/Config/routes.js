@@ -16,6 +16,9 @@ import EditExpense from "../Pages/Expense/EditExpense";
 import ExpenseCategory from "../Pages/Expense/ExpenseCategory/ExpenseCategory";
 import AddExpenseCategory from "../Pages/Expense/ExpenseCategory/AddExpenseCategory";
 import EditExpenseCategory from "../Pages/Expense/ExpenseCategory/EditExpenseCategory";
+import Nas from '../Pages/Nas/Nas'
+import NasAdd from '../Pages/Nas/NasAdd'
+import NasEdit from '../Pages/Nas/NasEdit'
 
 
 const routes = [
@@ -82,6 +85,21 @@ const routes = [
     {
         path:'/expense/edit/:id',
         element:<EditExpense />,
+        exact:true
+    },
+    {
+        path:'/nas',
+        element:<Nas />,
+        exact:true
+    },
+    {
+        path:'/nas/add',
+        element:<NasAdd />,
+        exact:true
+    },
+    {
+        path:'/nas/edit/:id',
+        element:<NasEdit />,
         exact:true
     },
     {

@@ -5,6 +5,7 @@ import { mapResponse } from '../../Helper/Api'
 
 const initialState = {
    check:isUserAuthenticated(),
+   token:null,
    user:getAuthUser(),
    errors:null,
    state:'idle'
@@ -48,10 +49,10 @@ export const AuthReducer = createSlice({
                 sessionStorage.setItem('token', action.payload.token);
                 sessionStorage.setItem('user', JSON.stringify(action.payload.user)); 
                 state.check = true;
+                state.token = action.payload.token;
                 state.user = action.payload.user;
                 
             }
-            console.log(action.payload);
         })
         .addCase(authLoginUser.rejected, (state, action)=>{
             toast.error(action.payload.message);
@@ -63,5 +64,7 @@ export const AuthReducer = createSlice({
   
   // Action creators are generated for each case reducer function
 export const { getUser  } = AuthReducer.actions
+
+export const getAuthState = ( state ) => state.auth;
   
 export default AuthReducer.reducer

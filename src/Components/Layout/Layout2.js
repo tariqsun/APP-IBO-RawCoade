@@ -1,6 +1,8 @@
 import {
+  CloudServerOutlined,
     DesktopOutlined,
     DollarOutlined,
+    ExportOutlined,
     FileOutlined,
     GifOutlined,
     GiftOutlined,
@@ -39,10 +41,14 @@ const items = [
         getItem('Pending Payments', '/payments'), 
         getItem('Payment History', '/payments/history')
     ]),
-    getItem('Expense', 'sub4', <DollarOutlined />, [
+    getItem('Expense', 'sub4', <ExportOutlined />, [
         getItem('Expense Category', '/expense/category'), 
         getItem('Expense', '/expense')
     ]),
+    getItem('Services', 'sub5', <CloudServerOutlined />, [
+        getItem('Panel', '/panels'), 
+        getItem('Nas', '/nas')
+  ]),
 ];
 
 
