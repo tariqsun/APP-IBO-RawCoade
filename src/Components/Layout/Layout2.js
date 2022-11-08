@@ -46,7 +46,7 @@ const items = [
         getItem('Expense', '/expense')
     ]),
     getItem('Services', 'sub5', <CloudServerOutlined />, [
-        getItem('Panel', '/panels'), 
+        getItem('Panels', '/panels'), 
         getItem('Nas', '/nas')
   ]),
 ];

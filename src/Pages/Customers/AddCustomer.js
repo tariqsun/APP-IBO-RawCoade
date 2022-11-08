@@ -7,6 +7,8 @@ import Page from '../../Components/Page';
 import { mapResponse } from '../../Helper/Api';
 import { createCustomers } from '../../Services/CustomerServices';
 import { getPlans } from '../../Services/PlanServices'
+import Select from '../../Components/UI/Select'
+
 
 function AddCustomer() {
 
@@ -95,6 +97,8 @@ function AddCustomer() {
                 autoComplete='off'
                 size="large">
 
+                  <Select />
+
                   <Form.Item
                       label="Customer ID"
                       validateStatus="validating"
@@ -104,7 +108,6 @@ function AddCustomer() {
                     >
                        <Input  />
                   </Form.Item>
-
                   <Form.Item
                       label="Name"
                       validateStatus={state.errors.name?'error':'validating'}

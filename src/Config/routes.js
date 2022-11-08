@@ -19,6 +19,9 @@ import EditExpenseCategory from "../Pages/Expense/ExpenseCategory/EditExpenseCat
 import Nas from '../Pages/Nas/Nas'
 import NasAdd from '../Pages/Nas/NasAdd'
 import NasEdit from '../Pages/Nas/NasEdit'
+import Panels from '../Pages/Panel/Panels'
+import AddPanel from '../Pages/Panel/AddPanel'
+import EditPanel from '../Pages/Panel/EditPanel'
 
 
 const routes = [
@@ -100,6 +103,21 @@ const routes = [
     {
         path:'/nas/edit/:id',
         element:<NasEdit />,
+        exact:true
+    },
+    {
+        path:'/panels',
+        element:<Panels />,
+        exact:true
+    },
+    {
+        path:'/panels/add',
+        element:<AddPanel />,
+        exact:true
+    },
+    {
+        path:'/panels/edit/:id',
+        element:<EditPanel />,
         exact:true
     },
     {
